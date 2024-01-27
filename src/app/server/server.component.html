@@ -1,12 +1,15 @@
+<!-- server.component.html -->
+
 <p>This is a server</p>
-<h1>{{title}}</h1>
+<h1>{{ title }}</h1>
 <h1>{{ GetData() }}</h1>
+
 <div class="row">
-    <input type="text" [value]="title"/>
-    <input type="text" [value]="GetData()"/>
+  <input type="text" [(ngModel)]="username" /> <!-- 1. Two-way binding for username -->
+  <p *ngIf="username !== ''">Username: {{ username }}</p> <!-- 2. Display username below the input -->
 </div>
 
 <div class="row">
-    <input type="button" value="Click Me" (click)="ChangeTitle($event)"/>
-
+  <input type="button" value="Click Me" (click)="ChangeTitle($event)" [disabled]="username === ''" />
+  <!-- 3. Button disabled if username is empty -->
 </div>
