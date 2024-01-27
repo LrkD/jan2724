@@ -1,3 +1,5 @@
+// server.component.ts
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,14 +9,14 @@ import { Component } from '@angular/core';
 })
 export class ServerComponent {
   title = "MS Server";
-  username = ""; // Add a new property for username
+  username = "";
 
   GetData() {
     return "Karl";
   }
 
   ChangeTitle(event) {
-    this.title = " ";
+    this.username = ""; // Reset username 
   }
 
   constructor() { }
