@@ -1,0 +1,12 @@
+<p>This is a server</p>
+<h1>{{title}}</h1>
+<h1>{{ GetData() }}</h1>
+<div class="row">
+    <input type="text" [value]="title"/>
+    <input type="text" [value]="GetData()"/>
+</div>
+
+<div class="row">
+    <input type="button" value="Click Me" (click)="ChangeTitle($event)"/>
+
+</div>
